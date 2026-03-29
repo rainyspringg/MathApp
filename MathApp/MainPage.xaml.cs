@@ -8,9 +8,10 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        // This runs your unit test in the background as soon as the app starts
+        // Run our unit tests silently in the background
         UnitTest test = new UnitTest();
         test.TestGetSquare();
+        test.TestGetCube();
     }
 
     private void OnCalculateClicked(object sender, EventArgs e)
@@ -20,8 +21,10 @@ public partial class MainPage : ContentPage
             MathCalculator calculator = new MathCalculator(inputNumber);
 
             double square = calculator.GetSquare();
+            double cube = calculator.GetCube(); // Calculate the cube
 
-            ResultLabel.Text = $"Square: {square}";
+            // Display both results
+            ResultLabel.Text = $"Square: {square}\nCube: {cube}";
         }
         else
         {
