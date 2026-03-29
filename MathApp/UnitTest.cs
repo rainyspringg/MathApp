@@ -19,16 +19,11 @@ internal class UnitTest
         }
     }
 
-    // PART 2 TEST
     public void TestGetCube()
     {
-        // 1. Setup: Create a calculator with the number 5
         MathCalculator calc = new MathCalculator(5);
-
-        // 2. Execute: 5 cubed (5 * 5 * 5) should be 125
         double result = calc.GetCube();
 
-        // 3. Evaluate
         if (result == 125)
         {
             Debug.WriteLine("[TEST] GetCube method PASSED.");
@@ -36,6 +31,26 @@ internal class UnitTest
         else
         {
             Debug.WriteLine($"[TEST] GetCube method FAILED. Expected 125, got {result}");
+        }
+    }
+
+    // PART 3 TEST
+    public void TestGetPowerOfFour()
+    {
+        // 1. Setup: Create a calculator with the number 5
+        MathCalculator calc = new MathCalculator(5);
+
+        // 2. Execute: 5 to the power of 4 (5 * 5 * 5 * 5) should be 625
+        double result = calc.GetPowerOfFour();
+
+        // 3. Evaluate
+        if (result == 625)
+        {
+            Debug.WriteLine("[TEST] GetPowerOfFour method PASSED.");
+        }
+        else
+        {
+            Debug.WriteLine($"[TEST] GetPowerOfFour method FAILED. Expected 625, got {result}");
         }
     }
 }
