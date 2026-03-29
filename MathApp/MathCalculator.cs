@@ -1,4 +1,6 @@
-﻿namespace MathApp;
+﻿using System;
+
+namespace MathApp;
 
 public class MathCalculator
 {
@@ -9,9 +11,14 @@ public class MathCalculator
         Number = number;
     }
 
-    // The function we will be testing
     public double GetSquare()
     {
         return Number * Number;
+    }
+
+    // PART 2 FEATURE: Get the Cube
+    public double GetCube()
+    {
+        return Math.Pow(Number, 3);
     }
 }
