@@ -16,9 +16,14 @@ public class MathCalculator
         return Number * Number;
     }
 
-    // PART 2 FEATURE: Get the Cube
     public double GetCube()
     {
         return Math.Pow(Number, 3);
+    }
+
+    // PART 3 FEATURE: Get the Power of 4
+    public double GetPowerOfFour()
+    {
+        return Math.Pow(Number, 4);
     }
 }
